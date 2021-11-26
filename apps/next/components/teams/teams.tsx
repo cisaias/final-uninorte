@@ -7,7 +7,6 @@ import { TeamsProps } from '@final-uninorte/types';
 export function Teams(props: TeamsProps) {
   const [teamsArray] = useTeams();
   const teams = props.teams ? props.teams : teamsArray;
-  console.log('tamano', teams.length);
   return (
     <div>
       <h1>Welcome to Teams!</h1>

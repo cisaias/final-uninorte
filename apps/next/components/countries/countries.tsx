@@ -16,7 +16,7 @@ export function Countries(props: IndexProps) {
         countries.map(({ code, name, flag }) => (
           <li className={styles.item} key={code}>
             {code} {name}{' '}
-            <img className={styles.picture} src={`${flag}`} alt="" />
+            <img className={styles.picture} src={`${flag}`} alt="foto de bandera" />
           </li>
         ))
       ) : (

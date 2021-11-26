@@ -6,13 +6,12 @@ const endpoint = 'https://api-football-beta.p.rapidapi.com/countries';
 const config = {
   headers: {
     'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-    'x-rapidapi-key': 'b37c5fd846msh0d1ba271858cc7dp134b07jsn39ded8cea0d5',
+    'x-rapidapi-key': 'bd95782141mshb0f4b1dbfc466a2p1e5684jsnc2fc943ec7d9',
   },
 };
 
 export const useCountries = () => {
   const [countries, setCountries] = useState([]);
-  console.log(countries)
   useEffect(() => {
     axios.get(endpoint, config).then((data) => {
       setCountries(data.data.response);

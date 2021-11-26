@@ -6,7 +6,6 @@ export  interface IndexProps {
   countries: [Country];
 }
 
-
 export  interface Country {
   code: string;
   name: string;
@@ -22,3 +21,13 @@ export  interface Team {
   logo: string;
   id: string;
 }
+export interface PlayerProps{
+  players: [Player];
+}
+
+export  interface Player {
+  name: string;
+  photo: string;
+  id: string;
+}
+

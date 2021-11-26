@@ -3,23 +3,25 @@ import Link from 'next/link';
 import {Ui} from '@final-uninorte/ui'
 import Countries from '../components/countries/countries';
 import { request, gql } from 'graphql-request'
-import { IndexProps, TeamsProps } from '@final-uninorte/types';
+import { IndexProps, TeamsProps, PlayerProps } from '@final-uninorte/types';
 import Team from '../components/teams/teams';
+import Players from '../components/players/players';
 
-
-export function Index(props: IndexProps, prop:TeamsProps) {
+export function Index(props: IndexProps, prop: TeamsProps, props2: PlayerProps) {
   const {countries} = props;
   const {teams}= prop;
+  const {players}=props2;
+ 
  return (
     <div className={styles.main}>
-      <Ui title="Bienvenido rey" showtitle={true}/>
+      <Ui title="Futbol Pro" showtitle={true}/>
       <Link href="/about"> Nosotros
       </Link>
       <div className={styles.section}>
         <Countries  countries={countries} />
         <Team teams={teams}/>
-      </div>
-      
+        <Players players={players}/>
+        </div>
      </div>
   );
 }
