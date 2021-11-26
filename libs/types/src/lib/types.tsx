@@ -2,32 +2,30 @@ export interface UiProps {
   title: string;
   showtitle?: boolean;
 }
-export  interface IndexProps {
+export interface IndexProps {
   countries: [Country];
+  teams: [Team];
+  players: [Player];
 }
 
-export  interface Country {
+export interface Country {
   code: string;
   name: string;
   flag: string;
 }
 
-export  interface TeamsProps {
-  teams: [Team];
-}
-export  interface Team {
+export interface Team {
   country: string;
   name: string;
   logo: string;
   id: string;
 }
-export interface PlayerProps{
+export interface PlayerProps {
   players: [Player];
 }
 
-export  interface Player {
+export interface Player {
   name: string;
   photo: string;
   id: string;
 }
-
