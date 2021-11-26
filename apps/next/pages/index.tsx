@@ -16,7 +16,7 @@ export function Index(props: IndexProps, prop:TeamsProps) {
       <Link href="/about"> Nosotros
       </Link>
       <div className={styles.section}>
-        <Countries  countries={countries} />
+        <Countries countries={countries} />
         <Team teams={teams}/>
       </div>
       
