@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const endpoint = 'https://api-football-beta.p.rapidapi.com/players';
 
+
 export const usePlayers = (selectedTeam: string) => {
   const [players, setPlayers] = useState([]);
   useEffect(() => {

@@ -5,6 +5,7 @@ import { PlayerProps } from '@final-uninorte/types';
 /* eslint-disable-next-line */
 
 export function Players(props: PlayerProps) {
+
   const [playersArray] = usePlayers(props.selectedTeam);
 
   const players = playersArray ? playersArray : props.players;
@@ -19,7 +20,6 @@ export function Players(props: PlayerProps) {
   }
   return (
     <div>
-      <h1>Lista de jugadores </h1>
 
       {players && players.length > 0 ? (
         players.map(({ player }) => (

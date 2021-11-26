@@ -21,7 +21,6 @@ export function Teams(props: TeamProps) {
   }
   return (
     <div>
-      <h1>Welcome to Teams!</h1>
       {teams && teams.length > 0 ? (
         teams.map(({ team }) => (
           <li key={team.id} className={styles.item}>
