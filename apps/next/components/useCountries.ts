@@ -6,7 +6,9 @@ const endpoint = 'https://api-football-beta.p.rapidapi.com/countries';
 const config = {
   headers: {
     'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
+
     'x-rapidapi-key': '029c1a73c9msh463545a4a5dc887p11ed0bjsn39781a336bc2',
+
   },
 };
 
