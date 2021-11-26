@@ -12,6 +12,7 @@ const config = {
 
 export const useCountries = () => {
   const [countries, setCountries] = useState([]);
+  console.log(countries)
   useEffect(() => {
     axios.get(endpoint, config).then((data) => {
       setCountries(data.data.response);

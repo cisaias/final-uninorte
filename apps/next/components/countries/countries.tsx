@@ -1,24 +1,27 @@
 import styles from './countries.module.scss';
-import {useCountries} from '../useCountries';
+import { useCountries } from '../useCountries';
 import { IndexProps } from '@final-uninorte/types';
 
 /* eslint-disable-next-line */
-export interface CountriesProps {}
+//export interface CountriesProps {}
 
 export function Countries(props: IndexProps) {
-  const [ countriesArray ] = useCountries();
+  const [countriesArray] = useCountries();
   const countries = props.countries ? props.countries : countriesArray;
 
   return (
     <div>
-       <h1>Countries</h1>
-      {
-        countries && countries.length > 0 
-        ?
-        countries.map(({code, name, flag}) => <li className={styles.item} key={code}>{code}  {name}  <img className={styles.picture} src={`${flag}`} alt="" /></li>)
-        :
+      <h1>Countries</h1>
+      {countries && countries.length > 0 ? (
+        countries.map(({ code, name, flag }) => (
+          <li className={styles.item} key={code}>
+            {code} {name}{' '}
+            <img className={styles.picture} src={`${flag}`} alt="" />
+          </li>
+        ))
+      ) : (
         <p>no data</p>
-      }
+      )}
     </div>
   );
 }
