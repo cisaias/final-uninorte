@@ -1,4 +1,4 @@
-import './countries.module.scss';
+import styles from './countries.module.scss';
 import {useCountries} from '../useCountries';
 import { IndexProps } from '@final-uninorte/types';
 
@@ -15,7 +15,7 @@ export function Countries(props: IndexProps) {
       {
         countries && countries.length > 0 
         ?
-        countries.map(({code, name}) => <li key={code}>{code} - {name}</li>)
+        countries.map(({code, name, flag}) => <li className={styles.item} key={code}>{code}  {name}  <img className={styles.picture} src={`${flag}`} alt="" /></li>)
         :
         <p>no data</p>
       }
