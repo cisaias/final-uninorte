@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const endpoint = 'https://api-football-beta.p.rapidapi.com/players';
 
-
 export const usePlayers = (selectedTeam: string) => {
   const [players, setPlayers] = useState([]);
   useEffect(() => {
@@ -13,7 +12,7 @@ export const usePlayers = (selectedTeam: string) => {
         headers: {
           'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
           'x-rapidapi-key':
-            '7497086860msh9da42ebcfd16ecdp1f4cdfjsn8f3ee5b0c154',
+            '029c1a73c9msh463545a4a5dc887p11ed0bjsn39781a336bc2',
         },
       })
       .then((data) => {
