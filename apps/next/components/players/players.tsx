@@ -8,9 +8,7 @@ export function Players(props: PlayerProps) {
   const [playersArray] = usePlayers();
   const players = props.players ? props.players : playersArray;
  return (
-    <div>
-      <h1>Lista de jugadores  </h1>
-      
+    <div> 
       {players && players.length > 0 ? (
         players.map(({ player }) => ( 
           <li key={player.id} >

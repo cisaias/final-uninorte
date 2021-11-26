@@ -12,8 +12,7 @@ export function Countries(props: IndexProps) {
 
   return (
     <div>
-      <h1>Countries</h1>
-      {countries && countries.length > 0 ? (
+       {countries && countries.length > 0 ? (
         countries.map(({ code, name, flag }) => (
           <li className={styles.item} key={code}>
             {code} {name}{' '}

@@ -10,7 +10,6 @@ export function Teams(props: IndexProps) {
   const teams = props.teams ? props.teams : teamsArray;
   return (
     <div>
-      <h1>Welcome to Teams!</h1>
       {teams && teams.length > 0 ? (
         teams.map(({ team }) => (
           <li key={team.id} className={styles.item}>

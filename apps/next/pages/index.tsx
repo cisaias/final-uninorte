@@ -11,13 +11,38 @@ export function Index(props: IndexProps) {
 
   return (
     <div className={styles.main}>
-      <Ui title="Futbol Pro" showtitle={true} />
-      <Link href="/about"> Nosotros</Link>
-      <div className={styles.section}>
-        <Countries countries={countries} />
-        <Team teams={teams} />
-        <Players players={players} />
-      </div>
+      <nav className={styles.nav}>
+        <Ui title="Futbol Pro - UniNorte" showtitle={true} />
+      </nav>
+
+      <section className={styles.mainsection}>
+        <div className={styles.section}>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.title}>Paises</h1>
+          </div>
+          <div className={styles.back}>
+            <Countries countries={countries} />
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.title}>Equipos</h1>
+          </div>
+          <div className={styles.back}>
+            <Team teams={teams} />
+          </div>
+        </div>
+
+        <div className={styles.section}>
+          <div className={styles.titleContainer}>
+            <h1 className={styles.title}>Jugadores</h1>
+          </div>
+          <div className={styles.back}>
+            <Players players={players} />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const config = {
   params: {season: '2020', team: '1125'},
   headers: {
     'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
-    'x-rapidapi-key': 'bd95782141mshb0f4b1dbfc466a2p1e5684jsnc2fc943ec7d9'
+    'x-rapidapi-key': '029c1a73c9msh463545a4a5dc887p11ed0bjsn39781a336bc2'
   },
   
 };
