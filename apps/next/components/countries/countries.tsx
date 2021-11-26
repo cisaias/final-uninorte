@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from './countries.module.scss';
 import { useCountries } from '../useCountries';
-import { IndexProps } from '@final-uninorte/types';
+import { CountriesProps } from '@final-uninorte/types';
 
 /* eslint-disable-next-line */
 //export interface CountriesProps {}
 
-export function Countries(props: IndexProps) {
+export function Countries(props: CountriesProps) {
   const [countriesArray] = useCountries();
   const countries = props.countries ? props.countries : countriesArray;
 
@@ -16,12 +16,19 @@ export function Countries(props: IndexProps) {
       {countries && countries.length > 0 ? (
         countries.map(({ code, name, flag }) => (
           <li className={styles.item} key={code}>
-            {code} {name}{' '}
+            <br />
+            {code} - {name} <br />
+            <br />
             <img
               className={styles.picture}
               src={`${flag}`}
               alt="foto de bandera"
             />
+            <br />
+            <button onClick={() => props.setCountry(name)}>
+              Select {name}
+            </button>
+            <br />
           </li>
         ))
       ) : (
