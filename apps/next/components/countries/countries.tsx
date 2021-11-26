@@ -1,11 +1,13 @@
 import './countries.module.scss';
 import {useCountries} from '../useCountries';
+import { IndexProps } from '@final-uninorte/types';
+
 /* eslint-disable-next-line */
 export interface CountriesProps {}
 
-export function Countries(props: CountriesProps) {
-  const [ countries ] = useCountries();
-  //const countries = props.countries ? props.countries : countriesArray;
+export function Countries(props: IndexProps) {
+  const [ countriesArray ] = useCountries();
+  const countries = props.countries ? props.countries : countriesArray;
 
   return (
     <div>
