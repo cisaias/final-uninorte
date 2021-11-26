@@ -3,19 +3,24 @@ import Link from 'next/link';
 import {Ui} from '@final-uninorte/ui'
 import Countries from '../components/countries/countries';
 import { request, gql } from 'graphql-request'
-import { IndexProps } from '@final-uninorte/types';
+import { IndexProps, TeamsProps } from '@final-uninorte/types';
+import Team from '../components/teams/teams';
 
 
-
-export function Index(props: IndexProps) {
+export function Index(props: IndexProps, prop:TeamsProps) {
   const {countries} = props;
-  return (
+  const {teams}= prop;
+ return (
     <div className={styles.main}>
       <Ui title="Bienvenido rey" showtitle={true}/>
       <Link href="/about"> Nosotros
       </Link>
-      <Countries  countries={countries}/>
-    </div>
+      <div className={styles.section}>
+        <Countries  countries={countries} />
+        <Team teams={teams}/>
+      </div>
+      
+     </div>
   );
 }
 

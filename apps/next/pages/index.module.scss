@@ -5,3 +5,10 @@
    align-items: center;
    background-color: aquamarine;
 }
+
+.section{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: flex-start;
+}
