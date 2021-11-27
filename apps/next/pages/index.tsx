@@ -22,6 +22,7 @@ export function Index({ countries, teams, players }: IndexProps) {
         <Ui title="Futbol Pro - UniNorte" showtitle={true} />
       </nav>
       <section className={styles.mainsection}>
+
         <div className={styles.section}>
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>Paises</h1>
@@ -30,6 +31,7 @@ export function Index({ countries, teams, players }: IndexProps) {
             <Countries countries={countries} setCountry={changeCountry} />
           </div>
         </div>
+
         <div className={styles.section}>
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>Equipos</h1>
@@ -38,6 +40,7 @@ export function Index({ countries, teams, players }: IndexProps) {
             <Team teams={teams} selectedCountry={selectedCountry} setTeam={changeTeam} />
           </div>
         </div>
+        
         <div className={styles.section}>
           <div className={styles.titleContainer}>
             <h1 className={styles.title}>Jugadores</h1>

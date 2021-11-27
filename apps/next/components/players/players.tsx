@@ -13,8 +13,7 @@ export function Players(props: PlayerProps) {
   if (!props.selectedTeam) {
     return (
       <div>
-        <h1>Welcome to Teams!</h1>
-        <p> Please select a team</p>
+         <p> Please select a team</p>
       </div>
     );
   }

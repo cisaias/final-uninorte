@@ -14,7 +14,6 @@ export function Teams(props: TeamProps) {
   if (!props.selectedCountry) {
     return (
       <div>
-        <h1>Welcome to Teams!</h1>
         <p> Please select a country</p>
       </div>
     );
