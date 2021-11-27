@@ -13,7 +13,7 @@ export const useTeams = (selectedCountry: string) => {
         headers: {
           'x-rapidapi-host': 'api-football-beta.p.rapidapi.com',
           'x-rapidapi-key':
-            '029c1a73c9msh463545a4a5dc887p11ed0bjsn39781a336bc2',
+            '46560a239amshdaea87f881e4771p1cfb87jsnd294a5f3d431',
         },
       })
       .then((data) => {
